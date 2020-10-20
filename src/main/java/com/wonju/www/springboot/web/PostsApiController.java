@@ -4,6 +4,7 @@ package com.wonju.www.springboot.web;
 import com.wonju.www.springboot.service.posts.PostsService;
 import com.wonju.www.springboot.web.dto.PostsResponseDto;
 import com.wonju.www.springboot.web.dto.PostsSaveRequestDto;
+import com.wonju.www.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
