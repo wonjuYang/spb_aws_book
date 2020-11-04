@@ -6,10 +6,10 @@ var main = {
         });
         $('#btn-update').on('click', function(){
             _this.update();
-        })
+        });
         $('#btn-delete').on('click', function(){
             _this.delete();
-        })
+        });
     },
     save: function(){
         var data = {
@@ -54,20 +54,19 @@ var main = {
     },
     delete: function(){
 
+        var id = $('#id').val();
 
-            var id = $('#id').val();
-            console.log(id);
-            $.ajax({
-                type: 'DELETE',
-                url: '/api/v1/posts/'+id,
-                contentType:'application/json; charset=utf-8',
-                dataType:'json'
-            }).done(function(data){
-                alert('글이 삭제했습니다');
-                window.location.href = '/';
-            }).fail(function(error){
-                alert(JSON.stringify(error))
-            })
+        $.ajax({
+            type: 'DELETE',
+            url: '/api/v1/posts/'+id,
+            contentType:'application/json; charset=utf-8',
+            dataType:'json'
+        }).done(function(data){
+            alert('글이 삭제했습니다');
+            window.location.href = '/';
+        }).fail(function(error){
+            alert(JSON.stringify(error))
+        })
     }
 
 
